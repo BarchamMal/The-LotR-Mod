@@ -1,2 +1,2 @@
 # The-LotR-Mod
- A Lord of the Rings mod
+ A Lord of the Rings mod.

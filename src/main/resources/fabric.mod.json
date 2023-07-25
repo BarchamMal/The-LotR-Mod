@@ -3,7 +3,7 @@
 	"id": "the-lotr-mod",
 	"version": "${version}",
 	"name": "The LOTR Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Lord of the Rings mod.",
 	"authors": [
 		"Me!"
 	],
@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"barch.the_lotr_mod.ExampleMod"
+          "barch.the_lotr_mod.TheLotRMod"
 		],
 		"client": [
-			"barch.the_lotr_mod.ExampleModClient"
+			"barch.the_lotr_mod.TheLotRModClient"
 		]
 	},
 	"mixins": [
