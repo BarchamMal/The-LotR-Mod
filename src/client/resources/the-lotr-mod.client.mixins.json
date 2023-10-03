@@ -3,7 +3,7 @@
 	"package": "barch.the_lotr_mod.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"ExampleClientMixin"
+		"TheLotRModClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
