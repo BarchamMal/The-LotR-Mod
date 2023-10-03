@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "lotr:item/t_c_c",
+	"texture_size": [64, 32],
+	"textures": {
+		"0": "lotr:item/carcase/cow/meatless_cow_carcase"
+	}
+}

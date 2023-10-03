@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "lotr:ground_pork"
+  },
+  "result": "lotr:cooked_ground_pork"
+}

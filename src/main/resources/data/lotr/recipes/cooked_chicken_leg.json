@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "lotr:chicken_leg"
+  },
+  "result": "lotr:cooked_chicken_leg"
+}
