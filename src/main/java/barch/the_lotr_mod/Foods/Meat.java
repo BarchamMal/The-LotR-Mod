@@ -103,7 +103,7 @@ public class Meat {
         ItemGrouper.GroupItem(GROUND_PORK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, MUTTON_HAMBURGER)});
         ItemGrouper.GroupItem(PORK_HAMBURGER, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_PORK)});
 
-        ItemGrouper.GroupItem(LIVER, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_PORK)});
+        ItemGrouper.GroupItem(LIVER, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, PORK_HAMBURGER)});
         ItemGrouper.GroupItem(COOKED_LIVER, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, LIVER)});
         ItemGrouper.GroupItem(RIB, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_LIVER)});
         ItemGrouper.GroupItem(COOKED_RIB, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, RIB)});

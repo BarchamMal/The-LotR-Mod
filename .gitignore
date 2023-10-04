@@ -4,3 +4,4 @@ build/
 .idea/
 run/
 *.DS_Store
+src/main/resources/data/lotr/tags/items/gear.yaml
