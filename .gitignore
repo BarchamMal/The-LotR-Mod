@@ -5,3 +5,5 @@ build/
 run/
 *.DS_Store
 src/main/resources/data/lotr/tags/items/gear.yaml
+src/main/resources/assets/lotr/icon.blend
+*.blend1
