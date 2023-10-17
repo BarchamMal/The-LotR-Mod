@@ -5,3 +5,9 @@ build/
 run/
 *.DS_Store
 src/main/resources/data/lotr/tags/items/gear.yaml
+src/main/resources/assets/lotr/models/held.json
+src/main/resources/assets/lotr/models/gen.json
+*.blend
+*.blend1
+src/main/resources/assets/lotr/models/item/make_models.py
+src/main/resources/assets/lotr/Minerals.yaml
