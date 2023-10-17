@@ -11,7 +11,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.the_lotr_mod.TheLotRMod.CARCASES_GROUP;
 import static barch.the_lotr_mod.TheLotRMod.NAMESPACE;
 
 public class Meat {
