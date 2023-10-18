@@ -2,11 +2,10 @@ package barch.the_lotr_mod;
 
 import barch.the_lotr_mod.Carcases.Carcases;
 import barch.the_lotr_mod.Foods.Meat;
+import barch.the_lotr_mod.LotrStatusEffects.LotrStatusEffects;
 import barch.the_lotr_mod.Minerals.Reg;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -61,6 +60,8 @@ public class TheLotRMod implements ModInitializer {
 		Meat.registerAll();
 
 		Reg.Register();
+
+		LotrStatusEffects.RegisterStatusEffects();
 
 
 	}

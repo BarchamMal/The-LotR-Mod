@@ -37,6 +37,14 @@
     "item.lotr.skinless_cow_carcase": "Skinned Dead Cow",
     "item.lotr.meatless_cow_carcase": "Cow Skeleton",
 
+
+    "death.attack.morgul_weapon": "%1$s fell into darkness due to the corruption of Angmar",
+    "death.attack.morgul_weapon.player": "%1$s fell into darkness after fighting %2$s",
+
+    "effect.lotr.morgul_weapon": "The Black Shadow",
+
     "itemGroup.lotr.lotr": "Lord of the Rings", 
     "itemGroup.lotr.carcases": "Carcases"
+
+
 }

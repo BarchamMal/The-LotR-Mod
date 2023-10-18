@@ -11,3 +11,4 @@ src/main/resources/assets/lotr/models/gen.json
 *.blend1
 src/main/resources/assets/lotr/models/item/make_models.py
 src/main/resources/assets/lotr/Minerals.yaml
+src/main/resources/assets/lotr/lang/make_tool_keys.py
