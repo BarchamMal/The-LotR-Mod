@@ -1,4 +1,4 @@
-package barch.the_lotr_mod.Minerals.Copper;
+package barch.the_lotr_mod.Minerals.Bronze;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
@@ -7,12 +7,11 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-import static barch.the_lotr_mod.Minerals.Copper.CopperMaterial.COPPER_NUGGET;
+import static barch.the_lotr_mod.Minerals.Bronze.BronzeMaterial.BRONZE_NUGGET;
 
-public class CopperArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[] {13,14,15,13};
-    private static final int[] PROTECTION_VALUES = new int[] {4, 5, 6, 8};
-
+public class BronzeArmorMaterial implements ArmorMaterial {
+    private static final int[] BASE_DURABILITY = new int[] {12,13,14,12};
+    private static final int[] PROTECTION_VALUES = new int[] {6, 7, 8, 10};
 
     @Override
     public int getDurability(ArmorItem.Type type) {
@@ -26,7 +25,7 @@ public class CopperArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 20;
+        return 10;
     }
 
     @Override
@@ -36,17 +35,17 @@ public class CopperArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(COPPER_NUGGET);
+        return Ingredient.ofItems(BRONZE_NUGGET);
     }
 
     @Override
     public String getName() {
-        return "copper";
+        return "bronze";
     }
 
     @Override
     public float getToughness() {
-        return 2;
+        return 4;
     }
 
     @Override

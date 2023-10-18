@@ -14,22 +14,14 @@ public class IronArmorMaterial implements ArmorMaterial {
     private static final int[] PROTECTION_VALUES = new int[] {6, 7, 8, 10};
 
 
-    public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 100;
-    }
-
-    public int getProtection(EquipmentSlot slot) {
-        return PROTECTION_VALUES[slot.getEntitySlotId()];
-    }
-
     @Override
     public int getDurability(ArmorItem.Type type) {
-        return 0;
+        return BASE_DURABILITY[type.getEquipmentSlot().getEntitySlotId()] * 100;
     }
 
     @Override
     public int getProtection(ArmorItem.Type type) {
-        return 0;
+        return PROTECTION_VALUES[type.getEquipmentSlot().getEntitySlotId()];
     }
 
     @Override
