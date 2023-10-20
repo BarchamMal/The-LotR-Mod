@@ -12,6 +12,9 @@ import static barch.the_lotr_mod.TheLotRMod.NAMESPACE;
 public class Tags {
 
     public static final TagKey<Item> KNIVES = ofItem(NAMESPACE,"knives");
+    public static final TagKey<Item> DISABLE_SHIELDS = ofItem("c","disable_shields");
+
+    public static final TagKey<Block> MACE_MINEABLE = ofBlock(NAMESPACE, "mineable/mace");
 
 
     private static TagKey<Biome> ofBiome(String namespace, String path) {
