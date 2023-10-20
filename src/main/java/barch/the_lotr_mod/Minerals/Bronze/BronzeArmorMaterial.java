@@ -1,6 +1,5 @@
 package barch.the_lotr_mod.Minerals.Bronze;
 
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;

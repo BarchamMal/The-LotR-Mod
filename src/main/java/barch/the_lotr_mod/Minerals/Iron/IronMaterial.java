@@ -2,6 +2,7 @@ package barch.the_lotr_mod.Minerals.Iron;
 
 import barch.the_lotr_mod.Glue.ItemGrouped;
 import barch.the_lotr_mod.Glue.ItemGrouper;
+import barch.the_lotr_mod.Minerals.LotrTools.MaceItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -26,6 +27,7 @@ public class IronMaterial {
     public static final ToolItem IRON_HOE = new HoeItem(IRON_TOOL_MATERIAL, 0, 0, new FabricItemSettings());
     public static final ToolItem IRON_SHOVEL = new ShovelItem(IRON_TOOL_MATERIAL, 3f, -1, new FabricItemSettings());
     public static final ToolItem IRON_PICKAXE = new PickaxeItem(IRON_TOOL_MATERIAL, 5, -2.4f, new FabricItemSettings());
+    public static final ToolItem IRON_MACE = new MaceItem(IRON_TOOL_MATERIAL, 12, -3f, new FabricItemSettings());
 
 
     public static final Item IRON_HELMET = new ArmorItem(IRON_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings());
@@ -52,6 +54,7 @@ public class IronMaterial {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_hoe"), IRON_HOE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_shovel"), IRON_SHOVEL);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_pickaxe"), IRON_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_mace"), IRON_MACE);
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_helmet"), IRON_HELMET);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "iron_chestplate"), IRON_CHESTPLATE);
@@ -79,6 +82,7 @@ public class IronMaterial {
         ItemGrouper.GroupItem(IRON_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, IRON_SHOVEL)});
         ItemGrouper.GroupItem(IRON_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, IRON_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_AXE)});
         ItemGrouper.GroupItem(IRON_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, IRON_AXE)});
+        ItemGrouper.GroupItem(IRON_MACE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, IRON_AXE), new ItemGrouped(ItemGroups.COMBAT, IRON_AXE)});
 
         ItemGrouper.GroupItem(IRON_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
         ItemGrouper.GroupItem(IRON_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, IRON_HELMET)});
