@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_sword",
+    "lotr:bronze_sword",
+    "lotr:orc_steel_sword"
+  ]
+}

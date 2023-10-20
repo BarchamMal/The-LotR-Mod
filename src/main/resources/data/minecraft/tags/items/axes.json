@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_axe",
+    "lotr:copper_axe",
+    "lotr:tin_axe",
+    "lotr:bronze_axe",
+    "lotr:elven_steel_axe",
+    "lotr:orc_steel_axe"
+  ]
+}

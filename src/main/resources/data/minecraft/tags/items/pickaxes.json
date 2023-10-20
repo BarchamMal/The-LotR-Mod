@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_pickaxe",
+    "lotr:copper_pickaxe",
+    "lotr:tin_pickaxe",
+    "lotr:bronze_pickaxe",
+    "lotr:elven_steel_pickaxe",
+    "lotr:orc_steel_pickaxe"
+  ]
+}

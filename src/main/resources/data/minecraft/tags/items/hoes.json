@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_hoe",
+    "lotr:copper_hoe",
+    "lotr:tin_hoe",
+    "lotr:bronze_hoe",
+    "lotr:elven_steel_hoe",
+    "lotr:orc_steel_hoe",
+    "lotr:celebril_hoe"
+  ]
+}

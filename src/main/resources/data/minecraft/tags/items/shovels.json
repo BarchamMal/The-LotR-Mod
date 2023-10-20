@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_shovel",
+    "lotr:copper_shovel",
+    "lotr:tin_shovel",
+    "lotr:bronze_shovel",
+    "lotr:elven_steel_shovel",
+    "lotr:orc_steel_shovel"
+  ]
+}

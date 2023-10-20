@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "lotr:iron_sword",
+    "lotr:copper_sword",
+    "lotr:tin_sword",
+    "lotr:bronze_sword",
+    "lotr:elven_steel_sword",
+    "lotr:orc_steel_sword",
+    "#minecraft:scimitars"
+  ]
+}
