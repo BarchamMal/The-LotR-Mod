@@ -3,7 +3,7 @@ package barch.the_lotr_mod;
 import barch.the_lotr_mod.Carcases.Carcases;
 import barch.the_lotr_mod.Foods.Meat;
 import barch.the_lotr_mod.LotrStatusEffects.LotrStatusEffects;
-import barch.the_lotr_mod.Minerals.Reg;
+import barch.the_lotr_mod.Metals.Reg;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -16,9 +16,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Dictionary;
-import java.util.Enumeration;
 
 import static barch.the_lotr_mod.Carcases.Carcases.COW_HIDE;
 import static barch.the_lotr_mod.Carcases.Carcases.MEATLESS_COW_CARCASE;
