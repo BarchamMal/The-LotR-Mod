@@ -27,7 +27,7 @@ public class IronMaterial {
     public static final ToolItem IRON_HOE = new HoeItem(IRON_TOOL_MATERIAL, 0, 0, new FabricItemSettings());
     public static final ToolItem IRON_SHOVEL = new ShovelItem(IRON_TOOL_MATERIAL, 3f, -1, new FabricItemSettings());
     public static final ToolItem IRON_PICKAXE = new PickaxeItem(IRON_TOOL_MATERIAL, 5, -2.4f, new FabricItemSettings());
-    public static final ToolItem IRON_MACE = new MaceItem(IRON_TOOL_MATERIAL, 12, -3f, new FabricItemSettings());
+    public static final ToolItem IRON_MACE = new MaceItem(IRON_TOOL_MATERIAL, 12, -3.25f, new FabricItemSettings());
 
 
     public static final Item IRON_HELMET = new ArmorItem(IRON_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings());

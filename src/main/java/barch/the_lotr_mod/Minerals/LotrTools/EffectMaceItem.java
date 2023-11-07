@@ -3,12 +3,11 @@ package barch.the_lotr_mod.Minerals.LotrTools;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.*;
 
 import static barch.the_lotr_mod.LotrStatusEffects.LotrStatusEffects.CORRUPTION;
+import static barch.the_lotr_mod.TheLotRMod.LOGGER;
 
 
 /**
@@ -39,10 +38,13 @@ public class EffectMaceItem extends MaceItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         StatusEffectInstance status = new StatusEffectInstance(CORRUPTION, 1, 0);
+        LOGGER.info("" + ((PlayerEntity)attacker).getAttackCooldownProgress(1f));
         if (!(target.getStatusEffect(statusEffect) == null)) {
             status = target.getStatusEffect(statusEffect);
         }
-        target.addStatusEffect(new StatusEffectInstance(statusEffect, 20*60*this.effectTime, status.getAmplifier()+1), attacker);
+        target.addStatusEffect(new StatusEffectInstance(statusEffect, 20 * 60 * this.effectTime, status.getAmplifier() + 1), attacker);
+
+
         return super.postHit(stack, target, attacker);
     }
 }
