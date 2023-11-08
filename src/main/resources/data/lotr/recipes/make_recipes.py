@@ -5,7 +5,20 @@ dirs = [
     "cooked_food.json",
 ]
 
-folder = "/Users/michael/Documents/GitHub/The-LotR-Mod/src/main/resources/data/lotr/"
+folder = __file__.split('/')
+folder.pop()
+folder.pop()
+nullify = True
+for dir in folder:
+
+    if nullify == True:
+        folder = ""
+        nullify = False
+
+    folder += dir + '/'
+    
+
+print(folder)
 foodFolder = "recipes/"
 
 foods = """
