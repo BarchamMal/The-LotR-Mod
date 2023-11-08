@@ -1,19 +1,19 @@
-package barch.the_lotr_mod.Metals.ElvenSteel;
+package barch.the_lotr_mod.Metals.Misc;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-import static barch.the_lotr_mod.Metals.ElvenSteel.ElvenSteelMaterial.ELVEN_STEEL_NUGGET;
+import static barch.the_lotr_mod.Metals.Misc.MiscMaterial.CELEBRIL_NUGGET;
 
-public class ElvenSteelToolMaterial implements ToolMaterial {
+public class CelebrilToolMaterial implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 2000;
+        return 1000;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8;
+        return 10;
     }
 
     @Override
@@ -33,6 +33,6 @@ public class ElvenSteelToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ELVEN_STEEL_NUGGET);
+        return Ingredient.ofItems(CELEBRIL_NUGGET);
     }
 }

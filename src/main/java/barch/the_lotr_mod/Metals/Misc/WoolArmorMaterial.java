@@ -1,16 +1,16 @@
-package barch.the_lotr_mod.Metals.ElvenSteel;
+package barch.the_lotr_mod.Metals.Misc;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-import static barch.the_lotr_mod.Metals.ElvenSteel.ElvenSteelMaterial.ELVEN_STEEL_NUGGET;
 
-public class ElvenSteelArmorMaterial implements ArmorMaterial {
-    private static final int[] BASE_DURABILITY = new int[] {17,18,19,17};
-    private static final int[] PROTECTION_VALUES = new int[] {7, 8, 10, 12};
+public class WoolArmorMaterial implements ArmorMaterial {
+    private static final int[] BASE_DURABILITY = new int[] {15,15,15,15};
+    private static final int[] PROTECTION_VALUES = new int[] {3, 4, 5, 6};
 
 
     @Override
@@ -30,17 +30,17 @@ public class ElvenSteelArmorMaterial implements ArmorMaterial {
 
     @Override
     public SoundEvent getEquipSound() {
-        return SoundEvents.ITEM_ARMOR_EQUIP_GOLD;
+        return SoundEvents.BLOCK_WOOL_PLACE;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ELVEN_STEEL_NUGGET);
+        return Ingredient.ofItems(Items.STRING);
     }
 
     @Override
     public String getName() {
-        return "elven_steel";
+        return "wool";
     }
 
     @Override
