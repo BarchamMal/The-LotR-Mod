@@ -31,7 +31,7 @@ public class EffectArmorItem extends ArmorItem {
             return;
         }
 
-        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(this.effect, 20*10, this.strength, true, true));
+        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(this.effect, 20*10, this.strength, true, false));
 
     }
 }
