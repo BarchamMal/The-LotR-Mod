@@ -30,7 +30,7 @@ public class RingItem extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);
         if (entity.isLiving()) {
-            ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(gem.getEffect(), 20, material.getLevel()), entity);
+            ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(gem.getEffect(), 20, material.getLevel(),true, false), entity);
         }
     }
 
