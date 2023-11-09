@@ -36,8 +36,8 @@ public class MiscMaterial {
     public static final Item WOOL_HORSE_ARMOR = new HorseArmorItem(11, "wool", new FabricItemSettings().maxCount(1));
 
 
-    public static final Item HITHLAIN_HELMET = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), INVISIBILITY, 1);
-    public static final Item HITHLAIN_CHESTPLATE = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), INVISIBILITY, 1);
+    public static final Item HITHLAIN_HOOD = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), INVISIBILITY, 1);
+    public static final Item HITHLAIN_CLOAK = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), INVISIBILITY, 1);
     public static final Item HITHLAIN_HORSE_ARMOR = new HorseArmorItem(11, "hithlain", new FabricItemSettings().maxCount(1));
 
 
@@ -64,8 +64,8 @@ public class MiscMaterial {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wool_horse_armor"), WOOL_HORSE_ARMOR);
 
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hithlain_helmet"), HITHLAIN_HELMET);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hithlain_chestplate"), HITHLAIN_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hithlain_hood"), HITHLAIN_HOOD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hithlain_cloak"), HITHLAIN_CLOAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hithlain_horse_armor"), HITHLAIN_HORSE_ARMOR);
 
     }
@@ -93,8 +93,8 @@ public class MiscMaterial {
         ItemGrouper.GroupItem(WOOL_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, WOOL_CHESTPLATE)});
         ItemGrouper.GroupItem(WOOL_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_HORSE_ARMOR)});
 
-        ItemGrouper.GroupItem(HITHLAIN_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
-        ItemGrouper.GroupItem(HITHLAIN_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, HITHLAIN_HELMET)});
+        ItemGrouper.GroupItem(HITHLAIN_HOOD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
+        ItemGrouper.GroupItem(HITHLAIN_CLOAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, HITHLAIN_HOOD)});
         ItemGrouper.GroupItem(HITHLAIN_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_HORSE_ARMOR)});
 
 
