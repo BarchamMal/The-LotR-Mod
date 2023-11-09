@@ -25,11 +25,11 @@
 ## Code code (the code this mod's code must follow)
  - Splitting materials: I've noticed that many mods have all they're blocks registered in one file. (ModBlocks.java) I consider this a messy way of coding.
  - In this mod, code is split up into a lot of different files, there is a folder for each metal/material (i.e. Bronze, Copper, OrcSteel, Iron) then, in that folder there are three files: (X represents the material's name) (other comment: there are a few exceptions, as with Misc)
-     ```
-       - XArmorMaterial,
-       - XToolMaterial,
-       - XMaterial,
-     ```
+      ```yaml
+      - XArmorMaterial,
+      - XToolMaterial,
+      - XMaterial,
+      ```
     Each file has a certain purpose:
       - XArmorMaterial: If you know how adding armors work then you already know what this does. Every armor item gets it's stats from an ArmorMaterial.
       - XToolMaterial: Same as the ArmorMaterials, tools and weapons get they're stats from ToolMaterials.
