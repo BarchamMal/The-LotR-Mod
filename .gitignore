@@ -12,3 +12,6 @@ src/main/resources/assets/lotr/models/gen.json
 src/main/resources/assets/lotr/models/item/make_models.py
 src/main/resources/assets/lotr/Minerals.yaml
 src/main/resources/assets/lotr/lang/make_tool_keys.py
+src/main/resources/assets/lotr/textures/item/templates/
+src/main/resources/assets/minecraft/textures/models/armor/templates/
+src/main/resources/assets/minecraft/textures/entity/horse/armor/horse_armor_templates/
