@@ -30,10 +30,10 @@ public class ElvenSteelMaterial {
     public static final ToolItem ELVEN_STEEL_PICKAXE = new PickaxeItem(ELVEN_STEEL_TOOL_MATERIAL, 5, -2.4f, new FabricItemSettings());
 
 
-    public static final Item ELVEN_STEEL_HELMET = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), HIGH_SPIRITS, 0);
-    public static final Item ELVEN_STEEL_CHESTPLATE = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), HIGH_SPIRITS, 0);
-    public static final Item ELVEN_STEEL_LEGGINGS = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new FabricItemSettings(), HIGH_SPIRITS, 0);
-    public static final Item ELVEN_STEEL_BOOTS = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new FabricItemSettings(), HIGH_SPIRITS, 0);
+    public static final EffectArmorItem ELVEN_STEEL_HELMET = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), HIGH_SPIRITS, 0);
+    public static final EffectArmorItem ELVEN_STEEL_CHESTPLATE = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), HIGH_SPIRITS, 0);
+    public static final EffectArmorItem ELVEN_STEEL_LEGGINGS = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new FabricItemSettings(), HIGH_SPIRITS, 0);
+    public static final EffectArmorItem ELVEN_STEEL_BOOTS = new EffectArmorItem(ELVEN_STEEL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new FabricItemSettings(), HIGH_SPIRITS, 0);
     public static final Item ELVEN_STEEL_HORSE_ARMOR = new HorseArmorItem(11, "elven_steel", new FabricItemSettings().maxCount(1));
 
 
@@ -45,6 +45,8 @@ public class ElvenSteelMaterial {
     }
 
     public static void RegisterItems() {
+
+        ELVEN_STEEL_ARMOR_MATERIAL.setFullSet(new ArmorItem[] {ELVEN_STEEL_BOOTS, ELVEN_STEEL_LEGGINGS, ELVEN_STEEL_CHESTPLATE, ELVEN_STEEL_HELMET});
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "elven_steel_ingot"), ELVEN_STEEL_INGOT);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "elven_steel_nugget"), ELVEN_STEEL_NUGGET);

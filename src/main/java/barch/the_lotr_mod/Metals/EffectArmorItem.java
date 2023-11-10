@@ -5,7 +5,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -13,11 +12,30 @@ public class EffectArmorItem extends ArmorItem {
 
     public StatusEffect effect;
     public int strength;
-    public EffectArmorItem(ArmorMaterial material, Type type, Settings settings, StatusEffect effect, int strength) {
+
+
+    public EffectArmorItem(EffectArmorMaterial material, Type type, Settings settings, StatusEffect effect, int strength) {
         super(material, type, settings);
 
         this.effect = effect;
         this.strength = strength;
+
+
+    }
+
+
+    public boolean hasFullSet(LivingEntity armorWearer) {
+
+        for (ArmorItem piece : ((EffectArmorMaterial)this.material).getFullSet()) {
+
+            if (!(armorWearer.getEquippedStack(piece.getSlotType()).getItem() == piece)) {
+                return false;
+            }
+
+        }
+
+        return true;
+
     }
 
     @Override
@@ -27,7 +45,7 @@ public class EffectArmorItem extends ArmorItem {
             return;
         }
 
-        if (((LivingEntity) entity).getEquippedStack(this.getSlotType()) != stack) {
+        if (!hasFullSet((LivingEntity)entity)) {
             return;
         }
 

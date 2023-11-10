@@ -1,14 +1,14 @@
 package barch.the_lotr_mod.Metals.Misc;
 
+import barch.the_lotr_mod.Metals.EffectArmorMaterial;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 
-public class WoolArmorMaterial implements ArmorMaterial {
+public class WoolArmorMaterial extends EffectArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {15,15,15,15};
     private static final int[] PROTECTION_VALUES = new int[] {3, 4, 5, 6};
 

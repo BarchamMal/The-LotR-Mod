@@ -1,5 +1,6 @@
 package barch.the_lotr_mod.Metals.ElvenSteel;
 
+import barch.the_lotr_mod.Metals.EffectArmorMaterial;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -8,7 +9,7 @@ import net.minecraft.sound.SoundEvents;
 
 import static barch.the_lotr_mod.Metals.ElvenSteel.ElvenSteelMaterial.ELVEN_STEEL_NUGGET;
 
-public class ElvenSteelArmorMaterial implements ArmorMaterial {
+public class ElvenSteelArmorMaterial extends EffectArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {17,18,19,17};
     private static final int[] PROTECTION_VALUES = new int[] {7, 8, 10, 12};
 

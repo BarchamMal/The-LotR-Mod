@@ -30,14 +30,14 @@ public class MiscMaterial {
 
     public static final ToolItem CELEBRIL_HOE = new HoeItem( CELEBRIL_TOOL_MATERIAL, 0, 0, new FabricItemSettings());
 
-    public static final Item WOOL_HELMET = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), HIGH_SPIRITS, 1);
-    public static final Item WOOL_CHESTPLATE = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), HIGH_SPIRITS, 1);
-    public static final Item WOOL_LEGGINGS = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new FabricItemSettings(), HIGH_SPIRITS, 1);
+    public static final EffectArmorItem WOOL_HELMET = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), HIGH_SPIRITS, 1);
+    public static final EffectArmorItem WOOL_CHESTPLATE = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), HIGH_SPIRITS, 1);
+    public static final EffectArmorItem WOOL_LEGGINGS = new EffectArmorItem(WOOL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new FabricItemSettings(), HIGH_SPIRITS, 1);
     public static final Item WOOL_HORSE_ARMOR = new HorseArmorItem(11, "wool", new FabricItemSettings().maxCount(1));
 
 
-    public static final Item HITHLAIN_HOOD = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), INVISIBILITY, 1);
-    public static final Item HITHLAIN_CLOAK = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), INVISIBILITY, 1);
+    public static final EffectArmorItem HITHLAIN_HOOD = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new FabricItemSettings(), INVISIBILITY, 1);
+    public static final EffectArmorItem HITHLAIN_CLOAK = new EffectArmorItem(HITHLAIN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(), INVISIBILITY, 1);
     public static final Item HITHLAIN_HORSE_ARMOR = new HorseArmorItem(11, "hithlain", new FabricItemSettings().maxCount(1));
 
 
@@ -49,6 +49,10 @@ public class MiscMaterial {
     }
 
     public static void RegisterItems() {
+
+
+        WOOL_ARMOR_MATERIAL.setFullSet(new ArmorItem[] {WOOL_LEGGINGS, WOOL_CHESTPLATE, WOOL_HELMET});
+        HITHLAIN_ARMOR_MATERIAL.setFullSet(new ArmorItem[] {HITHLAIN_CLOAK, HITHLAIN_HOOD});
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "celebril_ingot"), CELEBRIL_INGOT);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "celebril_nugget"), CELEBRIL_NUGGET);

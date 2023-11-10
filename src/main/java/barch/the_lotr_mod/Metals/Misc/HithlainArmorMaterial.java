@@ -1,5 +1,6 @@
  package barch.the_lotr_mod.Metals.Misc;
 
+import barch.the_lotr_mod.Metals.EffectArmorMaterial;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
@@ -10,7 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import static barch.the_lotr_mod.Metals.Misc.MiscMaterial.HITHLAIN_FIBER;
 
 
- public class HithlainArmorMaterial implements ArmorMaterial {
+ public class HithlainArmorMaterial extends EffectArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {25,25,25,25};
     private static final int[] PROTECTION_VALUES = new int[] {5, 5, 5, 5};
 
