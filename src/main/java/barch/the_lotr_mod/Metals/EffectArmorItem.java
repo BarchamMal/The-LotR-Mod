@@ -26,6 +26,8 @@ public class EffectArmorItem extends ArmorItem {
 
     public boolean hasFullSet(LivingEntity armorWearer) {
 
+        // We're looping through the full armor set (owned by the ArmorMaterial)
+        // which could be as small as only one piece of armor, or could be all four pieces
         for (ArmorItem piece : ((EffectArmorMaterial)this.material).getFullSet()) {
 
             if (!(armorWearer.getEquippedStack(piece.getSlotType()).getItem() == piece)) {

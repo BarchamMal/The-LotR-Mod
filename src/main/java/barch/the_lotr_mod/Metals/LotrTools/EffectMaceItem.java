@@ -34,6 +34,8 @@ public class EffectMaceItem extends MaceItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         StatusEffectInstance status = new StatusEffectInstance(statusEffect, 1, 0,true, false);
+        // This code is confusing, what it's doing is checking if the
+        // target has the effect already, if it does set "status" to that effect
         if (!(target.getStatusEffect(statusEffect) == null)) {
             status = target.getStatusEffect(statusEffect);
         }

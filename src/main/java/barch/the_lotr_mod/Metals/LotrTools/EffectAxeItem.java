@@ -34,9 +34,12 @@ public class EffectAxeItem extends AxeItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         StatusEffectInstance status = new StatusEffectInstance(statusEffect, 1, 0,true, false);
+        // This code is confusing, what it's doing is checking if the
+        // target has the effect already, if it does set "status" to that effect
         if (!(target.getStatusEffect(statusEffect) == null)) {
             status = target.getStatusEffect(statusEffect);
         }
+
         target.addStatusEffect(new StatusEffectInstance(statusEffect, 20*60*this.effectTime, status.getAmplifier()+1,true, false), attacker);
         return super.postHit(stack, target, attacker);
     }
