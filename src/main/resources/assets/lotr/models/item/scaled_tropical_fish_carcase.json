@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "lotr:item/t_tf_c",
+	"texture_size": [32,32],
+	"textures": {
+		"0": "lotr:item/carcase/tropical_fish/scaled_tropical_fish_carcase"
+	}
+}

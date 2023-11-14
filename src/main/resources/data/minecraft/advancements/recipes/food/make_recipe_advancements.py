@@ -30,7 +30,14 @@ ground_pork,
 liver,
 rib,
 tongue,
-sausage
+sausage,
+ham,
+bacon,
+salmon_steak,
+cod_steak,
+tropical_fish_steak,
+poison_fish_steak,
+pufferfish_steak
 """.replace("\n", "").split(',')
 
 for food in foods:

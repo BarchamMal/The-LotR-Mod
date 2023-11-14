@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static barch.the_lotr_mod.Carcases.AnimalByproducts.*;
 import static barch.the_lotr_mod.Foods.Meat.*;
 import static barch.the_lotr_mod.TheLotRMod.CARCASES_GROUP;
 import static barch.the_lotr_mod.TheLotRMod.NAMESPACE;
@@ -39,7 +40,7 @@ public class Carcases {
     );
     public static final CarcaseItem SKINLESS_COW_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BEEF, 32), new ItemCut(RIB, 2), new ItemCut(TONGUE, 1), new ItemCut(LIVER, 1), new ItemCut(GROUND_BEEF, 32)},
+            new ItemCut[] {new ItemCut(Items.BEEF, 32), new ItemCut(RIB, 2), new ItemCut(TONGUE, 1), new ItemCut(LIVER, 1), new ItemCut(GROUND_BEEF, 32), new ItemCut(INTESTINE, 16)},
             MEATLESS_COW_CARCASE
     );
     public static final CarcaseItem COW_CARCASE = new CarcaseItem(
@@ -58,7 +59,7 @@ public class Carcases {
     );
     public static final CarcaseItem SKINLESS_SHEEP_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.MUTTON, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_MUTTON, 24)},
+            new ItemCut[] {new ItemCut(Items.MUTTON, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_MUTTON, 24), new ItemCut(INTESTINE, 12)},
             MEATLESS_SHEEP_CARCASE
     );
     public static final CarcaseItem SHEEP_CARCASE = new CarcaseItem(
@@ -96,13 +97,89 @@ public class Carcases {
     );
     public static final CarcaseItem SKINLESS_PIG_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.PORKCHOP, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_PORK, 24), new ItemCut(BACON, 8), new ItemCut(HAM, 4)},
+            new ItemCut[] {new ItemCut(Items.PORKCHOP, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_PORK, 24), new ItemCut(BACON, 8), new ItemCut(HAM, 4), new ItemCut(INTESTINE, 12)},
             MEATLESS_PIG_CARCASE
     );
     public static final CarcaseItem PIG_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
             new ItemCut[] {new ItemCut(SOFT_HIDE, 1)},
             SKINLESS_PIG_CARCASE
+    );
+
+    //                             SALMON
+    // ================================================================>
+
+    public static final CarcaseItem MEATLESS_SALMON_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_SALMON_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(SALMON_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            MEATLESS_SALMON_CARCASE
+    );
+    public static final CarcaseItem SALMON_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(FISH_SCALES, 8)},
+            SCALED_SALMON_CARCASE
+    );
+
+    //                                COD
+    // ================================================================>
+
+    public static final CarcaseItem MEATLESS_COD_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_COD_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(COD_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            MEATLESS_COD_CARCASE
+    );
+    public static final CarcaseItem COD_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(FISH_SCALES, 8)},
+            SCALED_COD_CARCASE
+    );
+
+    //                            TROPICAL FISH
+    // ================================================================>
+
+    public static final CarcaseItem MEATLESS_TROPICAL_FISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_TROPICAL_FISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(TROPICAL_FISH_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            MEATLESS_TROPICAL_FISH_CARCASE
+    );
+    public static final CarcaseItem TROPICAL_FISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(COLORFUL_FISH_SCALES, 8)},
+            SCALED_TROPICAL_FISH_CARCASE
+    );
+
+    //                             PUFFERFISH
+    // ================================================================>
+
+    public static final CarcaseItem MEATLESS_PUFFERFISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_PUFFERFISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(PUFFERFISH_STEAK, 4),new ItemCut(POISONOUS_FISH_STEAK, 2), new ItemCut(INTESTINE, 2)},
+            MEATLESS_PUFFERFISH_CARCASE
+    );
+    public static final CarcaseItem PUFFERFISH_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(PUFFERFISH_SPIKE, 16)},
+            SCALED_PUFFERFISH_CARCASE
     );
 
 
@@ -130,6 +207,23 @@ public class Carcases {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_chicken_carcase"), SKINLESS_CHICKEN_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "chicken_carcase"), CHICKEN_CARCASE);
 
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_salmon_carcase"), MEATLESS_SALMON_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_salmon_carcase"), SCALED_SALMON_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "salmon_carcase"), SALMON_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_cod_carcase"), MEATLESS_COD_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_cod_carcase"), SCALED_COD_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cod_carcase"), COD_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_tropical_fish_carcase"), MEATLESS_TROPICAL_FISH_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_tropical_fish_carcase"), SCALED_TROPICAL_FISH_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tropical_fish_carcase"), TROPICAL_FISH_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_pufferfish_carcase"), MEATLESS_PUFFERFISH_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_pufferfish_carcase"), SCALED_PUFFERFISH_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "pufferfish_carcase"), PUFFERFISH_CARCASE);
+
+
 
 
 
@@ -152,6 +246,26 @@ public class Carcases {
         ItemGrouper.GroupItem(PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_CHICKEN_CARCASE)});
         ItemGrouper.GroupItem(SKINLESS_PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PIG_CARCASE)});
         ItemGrouper.GroupItem(MEATLESS_PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_PIG_CARCASE)});
+
+        ItemGrouper.GroupItem(PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_CHICKEN_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PIG_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_PIG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_PIG_CARCASE)});
+
+        ItemGrouper.GroupItem(SALMON_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_PIG_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_SALMON_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SALMON_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_SALMON_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_SALMON_CARCASE)});
+
+        ItemGrouper.GroupItem(COD_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_SALMON_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_COD_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, COD_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_COD_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_COD_CARCASE)});
+
+        ItemGrouper.GroupItem(TROPICAL_FISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_COD_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_TROPICAL_FISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, TROPICAL_FISH_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_TROPICAL_FISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_TROPICAL_FISH_CARCASE)});
+
+        ItemGrouper.GroupItem(PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_TROPICAL_FISH_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PUFFERFISH_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_PUFFERFISH_CARCASE)});
 
     }
 

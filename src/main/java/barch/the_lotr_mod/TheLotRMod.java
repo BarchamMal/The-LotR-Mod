@@ -1,5 +1,6 @@
 package barch.the_lotr_mod;
 
+import barch.the_lotr_mod.Carcases.AnimalByproducts;
 import barch.the_lotr_mod.Carcases.Carcases;
 import barch.the_lotr_mod.Foods.Meat;
 import net.fabricmc.api.ModInitializer;
@@ -15,6 +16,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static barch.the_lotr_mod.Carcases.AnimalByproducts.FISH_SCALES;
 import static barch.the_lotr_mod.Carcases.Carcases.COW_HIDE;
 import static barch.the_lotr_mod.Carcases.Carcases.MEATLESS_COW_CARCASE;
 
@@ -29,6 +31,7 @@ public class TheLotRMod implements ModInitializer {
 
 	public static final RegistryKey<ItemGroup> LOTR_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "lotr"));
 	public static final RegistryKey<ItemGroup> CARCASES_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "carcases"));
+	public static final RegistryKey<ItemGroup> BYPRODUCTS_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "byproducts"));
 
 
 	@Override
@@ -38,6 +41,11 @@ public class TheLotRMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
+		Registry.register(Registries.ITEM_GROUP, BYPRODUCTS_GROUP, FabricItemGroup.builder()
+				.icon(() -> new ItemStack(FISH_SCALES))
+				.displayName(Text.translatable("itemGroup."+NAMESPACE+".animal_byproducts"))
+				.build());
 
 		Registry.register(Registries.ITEM_GROUP, LOTR_GROUP, FabricItemGroup.builder()
 				.icon(() -> new ItemStack(COW_HIDE))
@@ -51,6 +59,7 @@ public class TheLotRMod implements ModInitializer {
 
 
 		Carcases.onInitialize();
+		AnimalByproducts.onInitialize();
 		Meat.registerAll();
 
 
