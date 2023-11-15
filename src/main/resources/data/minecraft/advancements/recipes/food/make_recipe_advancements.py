@@ -37,7 +37,8 @@ salmon_steak,
 cod_steak,
 tropical_fish_steak,
 poison_fish_steak,
-pufferfish_steak
+pufferfish_steak,
+turtle_steak
 """.replace("\n", "").split(',')
 
 for food in foods:

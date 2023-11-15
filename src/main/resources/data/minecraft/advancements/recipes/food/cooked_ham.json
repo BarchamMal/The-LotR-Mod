@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_poison_fish_steak": {
+    "has_ham": {
       "conditions": {
         "items": [
           {
             "items": [
-              "lotr:cooked_poison_fish_steak"
+              "lotr:ham"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lotr:cooked_poison_fish_steak_from_campfire_cooking"
+        "recipe": "lotr:cooked_ham"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_poison_fish_steak",
+      "has_ham",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lotr:cooked_poison_fish_steak_from_campfire_cooking"
+      "lotr:cooked_ham"
     ]
   }
 }

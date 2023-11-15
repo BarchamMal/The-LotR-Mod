@@ -182,6 +182,30 @@ public class Carcases {
             SCALED_PUFFERFISH_CARCASE
     );
 
+    //                              TURTLE
+    // ================================================================>
+
+    public static final CarcaseItem TURTLE_SHELL = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(LARGE_SCUTE, 14)},
+            Items.AIR
+    );
+    public static final CarcaseItem MEATLESS_TURTLE_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(Items.BONE, 12)},
+            Items.AIR
+    );
+    public static final CarcaseItem SHELLESS_TURTLE_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(TURTLE_STEAK, 48), new ItemCut(INTESTINE, 14)},
+            MEATLESS_TURTLE_CARCASE
+    );
+    public static final CarcaseItem TURTLE_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new ItemCut[] {new ItemCut(TURTLE_SHELL, 1)},
+            SHELLESS_TURTLE_CARCASE
+    );
+
 
 
 
@@ -222,6 +246,11 @@ public class Carcases {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_pufferfish_carcase"), MEATLESS_PUFFERFISH_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_pufferfish_carcase"), SCALED_PUFFERFISH_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "pufferfish_carcase"), PUFFERFISH_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "turtle_shell"), TURTLE_SHELL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_turtle_carcase"), MEATLESS_TURTLE_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "shelless_turtle_carcase"), SHELLESS_TURTLE_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "turtle_carcase"), TURTLE_CARCASE);
 
 
 
@@ -266,6 +295,11 @@ public class Carcases {
         ItemGrouper.GroupItem(PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_TROPICAL_FISH_CARCASE)});
         ItemGrouper.GroupItem(SCALED_PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PUFFERFISH_CARCASE)});
         ItemGrouper.GroupItem(MEATLESS_PUFFERFISH_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_PUFFERFISH_CARCASE)});
+
+        ItemGrouper.GroupItem(TURTLE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_PUFFERFISH_CARCASE)});
+        ItemGrouper.GroupItem(SHELLESS_TURTLE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, TURTLE_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_TURTLE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SHELLESS_TURTLE_CARCASE)});
+        ItemGrouper.GroupItem(TURTLE_SHELL, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_TURTLE_CARCASE)});
 
     }
 

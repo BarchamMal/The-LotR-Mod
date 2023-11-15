@@ -63,6 +63,8 @@ public class Meat {
     public static final Item COOKED_PUFFERFISH_STEAK = createFood(HAMBURGER_FOOD);
     public static final Item POISONOUS_FISH_STEAK = createFood(POISON_MEAT_FOOD);
     public static final Item COOKED_POISONOUS_FISH_STEAK = createFood(COOKED_TOXIC_MEAT_FOOD);
+    public static final Item TURTLE_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_TURTLE_STEAK = createFood(HAMBURGER_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new FabricItemSettings().food(foodComponent));
@@ -111,6 +113,8 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_pufferfish_steak"), COOKED_PUFFERFISH_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "poison_fish_steak"), POISONOUS_FISH_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_poison_fish_steak"), COOKED_POISONOUS_FISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "turtle_steak"), TURTLE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_turtle_steak"), COOKED_TURTLE_STEAK);
 
     }
 
@@ -153,6 +157,8 @@ public class Meat {
         ItemGrouper.GroupItem(COOKED_PUFFERFISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, PUFFERFISH_STEAK)});
         ItemGrouper.GroupItem(POISONOUS_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_PUFFERFISH_STEAK)});
         ItemGrouper.GroupItem(COOKED_POISONOUS_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, POISONOUS_FISH_STEAK)});
+        ItemGrouper.GroupItem(TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_POISONOUS_FISH_STEAK)});
+        ItemGrouper.GroupItem(COOKED_TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TURTLE_STEAK)});
 
     }
 

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_poison_fish_steak": {
+    "has_bacon": {
       "conditions": {
         "items": [
           {
             "items": [
-              "lotr:poison_fish_steak"
+              "lotr:bacon"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lotr:cooked_poison_fish_steak_from_smoking"
+        "recipe": "lotr:cooked_bacon"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_poison_fish_steak",
+      "has_bacon",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lotr:cooked_poison_fish_steak_from_smoking"
+      "lotr:cooked_bacon"
     ]
   }
 }

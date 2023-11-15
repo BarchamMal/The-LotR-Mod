@@ -4,7 +4,7 @@
   "cookingtime": 600,
   "experience": 0.35,
   "ingredient": {
-    "item": "lotr:poison_fish"
+    "item": "lotr:turtle_steak"
   },
-  "result": "lotr:cooked_poison_fish"
+  "result": "lotr:cooked_turtle_steak"
 }

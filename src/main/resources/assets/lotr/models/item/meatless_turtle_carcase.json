@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "lotr:item/t_t_c",
+	"textures": {
+		"0": "lotr:item/carcase/turtle/meatless_turtle_carcase"
+	}
+}

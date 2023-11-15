@@ -32,6 +32,8 @@
     "item.lotr.cooked_poison_fish_steak": "Cooked Poison Fish Steak",
     "item.lotr.pufferfish_steak": "Pufferfish Steak",
     "item.lotr.cooked_pufferfish_steak": "Cooked Pufferfish Steak",
+    "item.lotr.turtle_steak": "Turtle Steak",
+    "item.lotr.cooked_turtle_steak": "Cooked Turtle Steak",
 
     "item.lotr.cow_hide": "Cow Hide",
     "item.lotr.soft_hide": "Soft Hide",
@@ -62,11 +64,16 @@
     "item.lotr.pufferfish_carcase": "Dead Pufferfish",
     "item.lotr.scaled_pufferfish_carcase": "Scaled Dead Pufferfish",
     "item.lotr.meatless_pufferfish_carcase": "Pufferfish Skeleton",
+    "item.lotr.turtle_carcase": "Dead Turtle",
+    "item.lotr.shelless_carcase": "Shelled Dead Turtle",
+    "item.lotr.turtle_shell": "Turtle Shell",
+    "item.lotr.meatless_turtle_carcase": "Turtle Skeleton",
 
     "item.lotr.fish_scales": "Fish Scales",
     "item.lotr.colorful_fish_scales": "Colorful Fish Scales",
     "item.lotr.pufferfish_spike": "Pufferfish Spike",
     "item.lotr.intestine": "Intestine",
+    "item.lotr.large_scute": "Large Scute",
 
     "itemGroup.lotr.lotr": "Lord of the Rings", 
     "itemGroup.lotr.animal_byproducts": "Animal Byproducts",
